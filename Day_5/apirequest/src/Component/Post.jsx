@@ -1,4 +1,5 @@
 import React from "react";
+import { PostItem } from "./PostItem";
 
 
 // write a function to get the data from the endpoints
@@ -28,19 +29,14 @@ export function Post(){
     // setPost(data)
     // }
 
-    const display =  post.map((postItem)=>{
-            return (<h2>id : {postItem.id} title : {postItem.title}</h2>)
-         })
-    
     console.log(post)
     return (
         <div>
             {/* writting event handler for click event */}
             <button onClick={getPostFromApi}>Get Post</button>
             {/* displaying data which i got from the endpoint */}
-            <div>
-                {display}
-            </div>
+            <PostItem posts={post}/>
+            
             
         </div>
     )
