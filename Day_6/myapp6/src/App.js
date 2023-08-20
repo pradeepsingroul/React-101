@@ -10,23 +10,23 @@ import { Timer2 } from './Assignments/Timer2';
 import { TimerWithGarbage } from './Assignments/GarbageTimer';
 
 function App() {
-  const [showTimer,setShowTimer] = React.useState(true)
+  const [flag,setFlag] = React.useState(true)
   return (
     <div className="App">
       {/* <Hooks/> */}
       {/* <HooksApiFetching /> */}
       {/* <UseEffestWithPages/> */}
 
-      {/* {showTimer ? <Timer/> : ""}
+      {/* {flag ? <Timer/> : ""}
       <Timer/>
-      <button onClick={()=>{setShowTimer(!showTimer)}}>{showTimer ? "Hide timder" : "Show timer"}</button> */}
+      <button onClick={()=>{setFlag(!flag)}}>{flag ? "Hide timder" : "Show timer"}</button> */}
     
 
     {/* //assignments */}
     {/* <Timer/> */}
    {/* <Timer2/> */}
-   {showTimer ? <TimerWithGarbage/> : ""}
-   <button onClick={()=>{setShowTimer(!showTimer)}}>{showTimer ? "Hide timder" : "Show timer"}</button>
+   {flag ? <TimerWithGarbage/> : ""}
+   <button onClick={()=>{setFlag(!flag)}}>{flag ? "Hide timder" : "Show timer"}</button>
    
     </div>
   );
