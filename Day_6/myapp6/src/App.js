@@ -6,7 +6,8 @@ import UseEffestWithPages from './Component/UseEffestWithPages'
 // import { Timer } from './Component/Timer';
 import React from 'react';
 import { Timer } from './Assignments/TimerAssignments';
-
+import { Timer2 } from './Assignments/Timer2';
+import { TimerWithGarbage } from './Assignments/GarbageTimer';
 
 function App() {
   const [showTimer,setShowTimer] = React.useState(true)
@@ -22,7 +23,11 @@ function App() {
     
 
     {/* //assignments */}
-   <Timer/>
+    {/* <Timer/> */}
+   {/* <Timer2/> */}
+   {showTimer ? <TimerWithGarbage/> : ""}
+   <button onClick={()=>{setShowTimer(!showTimer)}}>{showTimer ? "Hide timder" : "Show timer"}</button>
+   
     </div>
   );
 }
