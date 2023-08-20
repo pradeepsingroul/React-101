@@ -1,19 +1,11 @@
 import React, { useEffect } from "react";
 
-
 export default function Posts(){
     const [loading,setLoading] = React.useState(true)
     const [posts,setPosts] = React.useState([]);
-    
     // using useEffest()
-    useEffect(()=>{
-       fetchedData();
-       
-    },[])
-
-
-     const fetchedData = async () =>{
-        
+    useEffect(()=>{fetchedData();},[])
+    const fetchedData = async () =>{
         let data = await fetch(`https://jsonplaceholder.typicode.com/posts?_limit=20`)
         data = await data.json();
         // return data;
@@ -23,7 +15,6 @@ export default function Posts(){
      if(loading){
         return <div>Loading... please wait for a sec it takes few seconds</div>
      }
-
      return <>
         {/* <button style={{marginTop:"35px"}} onClick={fetchedData}>getPost</button> */}
         <div>
@@ -32,8 +23,6 @@ export default function Posts(){
                         <p>{post.body}</p>
                         <p>{post.title}</p>
                     </div>
-
-
             })}
         </div>
      </>
