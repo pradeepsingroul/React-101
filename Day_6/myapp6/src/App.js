@@ -3,8 +3,10 @@ import './App.css';
 import Hooks from './Component/Hooks';
 import HooksApiFetching from './Component/HooksApiFetching'
 import UseEffestWithPages from './Component/UseEffestWithPages'
-import { Timer } from './Component/Timer';
+// import { Timer } from './Component/Timer';
 import React from 'react';
+import { Timer } from './Assignments/TimerAssignments';
+
 
 function App() {
   const [showTimer,setShowTimer] = React.useState(true)
@@ -14,9 +16,13 @@ function App() {
       {/* <HooksApiFetching /> */}
       {/* <UseEffestWithPages/> */}
 
-      {showTimer ? <Timer/> : ""}
+      {/* {showTimer ? <Timer/> : ""}
       <Timer/>
-      <button onClick={()=>{setShowTimer(!showTimer)}}>{showTimer ? "Hide timder" : "Show timer"}</button>
+      <button onClick={()=>{setShowTimer(!showTimer)}}>{showTimer ? "Hide timder" : "Show timer"}</button> */}
+    
+
+    {/* //assignments */}
+   <Timer/>
     </div>
   );
 }
