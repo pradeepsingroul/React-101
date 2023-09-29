@@ -1,0 +1,24 @@
+
+
+1-> breaking down our structure before start;
+
+CartContrainer
+    CartItem
+        LableName
+        LablePrice
+        Buttons
+            Quantity
+        Buttons
+    CartItem
+        LableName
+        LablePrice
+         Buttons
+            Quantity
+        Buttons
+    CartItem
+        LableName
+        LablePrice
+         Buttons
+            Quantity
+        Buttons
+    TotalSum
