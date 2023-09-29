@@ -22,3 +22,14 @@ CartContrainer
             Quantity
         Buttons
     TotalSum
+
+2-> passing value to the components;
+    parent to child
+    child to parent
+    sibling to sibling
+
+3->UseState: when we want to remember somethink then we can use UseState;
+4-> UseEffect:
+4->UseRef: when we want to your component to remember somethinh
+    but dont want it to re-render when it changes. we can use
+    "Hooks" useRef;

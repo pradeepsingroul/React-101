@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import Parent from './Components/Counter/Parent';
+import Timer from './Components/Timer/Timer';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         </a>
       </header>
       <Parent/>
+      <Timer/>
     </div>
 
   );
