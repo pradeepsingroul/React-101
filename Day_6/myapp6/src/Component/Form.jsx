@@ -1,4 +1,4 @@
-import React from "react";
+ import React from "react";
 
 
 export default function Form() {
@@ -21,7 +21,7 @@ export default function Form() {
     }
     const handleChange = (e) => {
         const { name, value, type,checked} = e.target;
-        console.log(value, type,checked,value)
+        // console.log(value, type,checked,value)
         const val = type === "checkbox" ? checked : value 
         setFormState({ ...formState, [name]: val })
     }

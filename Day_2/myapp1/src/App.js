@@ -13,7 +13,26 @@ import Avatar from './Component/Avatar'
 // }
 
 function App() {
-  
+
+  const data = [
+    {
+      name: "Iron man",
+      sourse: "https://cdnb.artstation.com/p/assets/covers/images/041/046/373/large/dot-square-dot-square-md-ironman01-00.jpg?1630598015"
+    },
+    {
+      name: "Iron man",
+      sourse: "https://cdnb.artstation.com/p/assets/covers/images/041/046/373/large/dot-square-dot-square-md-ironman01-00.jpg?1630598015"
+    },
+    {
+      name: "Iron man",
+      sourse: "https://cdnb.artstation.com/p/assets/covers/images/041/046/373/large/dot-square-dot-square-md-ironman01-00.jpg?1630598015"
+    }
+  ]
+
+  const avatars = data.map((val) => {
+    return <Avatar name={val.name} sourse={val.sourse} />
+  })
+
   return (
     <div className="App">
       <h1>To! kese hain aap log</h1>
@@ -23,9 +42,9 @@ function App() {
       */}
       <Buttom text="click me" />
       <Exmaple />
+      {avatars}
+      {/* <Avatar  /> */}
 
-      <Avatar name="Iron man" sourse="https://cdnb.artstation.com/p/assets/covers/images/041/046/373/large/dot-square-dot-square-md-ironman01-00.jpg?1630598015" />
-    
     </div>
   );
 }

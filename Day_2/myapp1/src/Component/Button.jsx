@@ -1,7 +1,11 @@
 export function Buttom(props){
 const {text} = props;
+
+const onClickEve = ()=>{
+    alert("Clicked")
+}
 return (
-<button onClick={()=>{
-    alert("someone clicked me")
-}}>{text}</button>);
+
+
+<button onClick={onClickEve}>{text}</button>);
 }
