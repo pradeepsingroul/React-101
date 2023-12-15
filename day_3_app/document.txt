@@ -1,0 +1,7 @@
+==> react is declarative programming
+
+==> document.create return accual html and react.createElement return an object
+ 
+==> React.useState()
+
+==> 
