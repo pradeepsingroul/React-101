@@ -1,4 +1,6 @@
 import React from "react";
+import PostItem from "./PostItem";
+import Loading from "./Loading";
 
 export default function Posts() {
     const [post, setPost] = React.useState([]);
@@ -15,18 +17,15 @@ export default function Posts() {
     }
 
     const postsRendering = post.map((item) => {
-        return <li style={{
-            border: '1px red solid',
-            height: "60px",
-            width: "auto"
-        }} key={item.id}>{item.title}</li>
+        return <PostItem key={item.id} title={item.title} body={item.body}/>
     })
-
 
     return <div>
         <button onClick={getPost}>Get Posts</button>
-        {rendered ? <h1>Loading...</h1> : <ul>
-            {postsRendering}
-        </ul>}
+        {rendered ? <Loading/> :  postsRendering}
     </div>
+
+
+ 
+   
 }
