@@ -1,25 +1,20 @@
-import logo from './logo.svg';
 import './App.css';
+import FormV from './componant/FormHandling/FormV';
+import { useContext } from 'react';
+import { AppContext } from './Context/AppContextProvide';
+// import AppContextProvider from './componant/ContextApi/AppContextProvide';
 
-function App() {
+export default function App() {
+const value = useContext(AppContext)
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* <FormV />   */}
+      <h1> hiiii</h1>
+      <h1>{value.text}</h1>
+
+
     </div>
   );
 }
 
-export default App;
+
