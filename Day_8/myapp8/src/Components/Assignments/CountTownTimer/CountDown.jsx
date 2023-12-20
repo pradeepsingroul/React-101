@@ -19,7 +19,7 @@ import Button from "./Button";
         }, 1000);
 
     }
-    const onPause = ()=>{
+    const onPause = ()=>{ 
        clearInterval(ref.current)
        ref.current = null;
     }

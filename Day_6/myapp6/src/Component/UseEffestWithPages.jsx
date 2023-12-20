@@ -11,6 +11,7 @@ export  default function PagesUseEffect(){
     useEffect(() =>{
         fetchPosts(page);
     },[page])
+    
     const fetchPosts = async (page) => {
         // setFetched(false)
         let post = await fetch(`https://jsonplaceholder.typicode.com/posts?_limit=5&_page=${page}`)
