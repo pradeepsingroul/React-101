@@ -4,6 +4,8 @@ import About from "../About";
 import Users from "../Users";
 import SingleUser from "../SingleUser";
 import PrivateRoute from "../PrivateRoute/PrivateRoutes";
+import LoginButton from "../LoginButton";
+import LogoutButton from "../LogoutButton";
 
 
 export default function AllRoutes() {
@@ -21,6 +23,8 @@ export default function AllRoutes() {
                 <PrivateRoute>
                     <SingleUser />
                 </PrivateRoute>} />
+            <Route path="/login" element={<LoginButton/>}/>
+            <Route path="/logout" element={<LogoutButton/>}/>
         </Routes>
 
     </div>
