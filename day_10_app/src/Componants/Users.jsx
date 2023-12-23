@@ -1,15 +1,21 @@
 import React, { useEffect } from "react"
 import { Link, useParams } from "react-router-dom"
 import './Users.css'
+import { useSearchParams } from "react-router-dom"
 
 
 export default function Users() {
+    let [searchParams,setSearchParams]= useSearchParams()
+    const init = Number(searchParams.get("page")) || 1
     const [users, setUsers] = React.useState([])
-    const [page,setPage] = React.useState(1)
+    const [page,setPage] = React.useState(init)
 
     useEffect(() => {
         fetchUsers()
-        console.log('user', users);
+        // console.log('user', users);
+        setSearchParams({
+            page: page,
+        })
     },[page])
 
     const fetchUsers = async () => {
@@ -18,6 +24,8 @@ export default function Users() {
         console.log('usersData', usersData.data);
         setUsers(usersData.data)
     }
+    
+    
 
 
 
