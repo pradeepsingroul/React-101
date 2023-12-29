@@ -16,6 +16,12 @@ export default function Todo(){
    
 
     return <div>
+
+        <div>
+            {items.map((item)=>{
+                return <p key={item.id}>{item.title}</p>
+            })}
+        </div>
         <button onClick={()=> setPage(page - 1)}>PREV</button>
         <h1>{page}</h1>
         <button onClick={()=> setPage(page + 1)}>NEXT</button>
